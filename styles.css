@@ -89,3 +89,28 @@ body {
 .accounts-menu:hover {
     background-color: #555;
 }
+
+
+.custom-cursor {
+    width: 20px;
+    height: 20px;
+    border: 2px solid white;
+    border-radius: 50%;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: transform 0.1s ease-out;
+    z-index: 1000;
+}
+
+
+.sidebar a:hover {
+    background-color: #555;
+    color: yellow;
+}
+
+
+.sidebar a:hover ~ .custom-cursor {
+    transform: scale(1.5);
+    background-color: rgba(255, 255, 255, 0.2);
+}
