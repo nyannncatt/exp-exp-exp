@@ -69,3 +69,23 @@ body {
 .section {
     margin-bottom: 40px;
 }
+.hidden {
+    display: none;
+}
+
+.sub-menu {
+    margin-left: 20px; /* Indent submenu items */
+}
+
+.accounts-menu {
+    cursor: pointer;
+    display: block;
+    padding: 10px;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+}
+
+.accounts-menu:hover {
+    background-color: #555;
+}
