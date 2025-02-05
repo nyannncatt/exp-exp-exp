@@ -161,3 +161,45 @@ body {
 .sidebar.minimized ~ .content {
     margin-left: 70px;
 }
+
+.sidebar {
+    width: 250px;
+    transition: width 0.3s ease-in-out;
+    position: fixed;
+    height: 100%;
+    background-color: #333;
+    padding: 15px;
+    right: 0; 
+    overflow: hidden;
+}
+
+
+.sub-menu {
+    display: none;
+    margin-left: 20px;
+    opacity: 0; 
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transform: translateX(-20px);
+}
+
+
+li:hover .sub-menu {
+    display: block;
+    opacity: 1; 
+    transform: translateX(0); 
+}
+
+
+.accounts-menu {
+    cursor: pointer;
+    display: block;
+    padding: 10px;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+}
+
+
+.accounts-menu:hover {
+    background-color: #555;
+}
