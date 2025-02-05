@@ -1,12 +1,38 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Select the Accounts section
+  
     const accountsMenu = document.querySelector(".accounts-menu");
 
     accountsMenu.addEventListener("click", function(e) {
-        e.preventDefault(); // Prevents the default link behavior
-        const subMenu = this.nextElementSibling; // Get the sub-menu (ul)
+        e.preventDefault(); 
+        const subMenu = this.nextElementSibling; 
         if (subMenu) {
-            subMenu.classList.toggle("hidden"); // Toggle visibility
+            subMenu.classList.toggle("hidden");
         }
+    });
+});
+document.addEventListener("DOMContentLoaded", function () {
+
+    const cursor = document.createElement("div");
+    cursor.classList.add("custom-cursor");
+    document.body.appendChild(cursor);
+
+  
+    document.addEventListener("mousemove", function (e) {
+        cursor.style.left = e.pageX + "px";
+        cursor.style.top = e.pageY + "px";
+    });
+
+
+    const links = document.querySelectorAll(".sidebar a");
+    links.forEach(link => {
+        link.addEventListener("mouseenter", function () {
+            cursor.style.transform = "scale(1.5)";
+            cursor.style.backgroundColor = "rgba(255, 255, 255, 0.3)";
+        });
+
+        link.addEventListener("mouseleave", function () {
+            cursor.style.transform = "scale(1)";
+            cursor.style.backgroundColor = "transparent";
+        });
     });
 });
