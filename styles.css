@@ -114,3 +114,52 @@ body {
     transform: scale(1.5);
     background-color: rgba(255, 255, 255, 0.2);
 }
+
+/* Sidebar Styling */
+.sidebar {
+    width: 250px;
+    transition: width 0.3s ease-in-out;
+    position: center;
+    height: 100%;
+    background-color: #333;
+    padding: 15px;
+    left: 0;
+    overflow: hidden;
+}
+
+/* Minimized sidebar (content hidden but h2 stays visible) */
+.sidebar.minimized {
+    width: 100px; /* Keeps only the title visible */
+}
+
+/* Ensure h2 stays visible */
+.sidebar h2 {
+    cursor: pointer;
+    text-align: center;
+    background-color: #444;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    white-space: nowrap;
+}
+
+/* Hide text but keep icons or elements inside */
+.sidebar.minimized ul {
+    display: none;
+}
+
+/* Hover effect for better UX */
+.sidebar h2:hover {
+    background-color: #555;
+}
+
+/* Content adjustment */
+.content {
+    margin-left: 270px;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+/* Adjust content when sidebar is minimized */
+.sidebar.minimized ~ .content {
+    margin-left: 70px;
+}

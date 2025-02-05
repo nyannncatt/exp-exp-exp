@@ -36,3 +36,12 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+document.addEventListener("DOMContentLoaded", function () {
+    const sidebar = document.querySelector(".sidebar");
+    const dashboardTitle = document.querySelector(".sidebar h2");
+
+    // Toggle sidebar content while keeping h2 visible
+    dashboardTitle.addEventListener("click", function () {
+        sidebar.classList.toggle("minimized");
+    });
+});
