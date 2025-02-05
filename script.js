@@ -1,22 +1,18 @@
+document.addEventListener("DOMContentLoaded", function() {
+    const toggleButton = document.createElement("button");
+    toggleButton.innerText = "☰";
+    toggleButton.classList.add("toggle-btn");
+    document.body.appendChild(toggleButton);
 
+    const sidebar = document.querySelector(".sidebar");
+    const content = document.querySelector(".content");
 
-document.querySelectorAll('.sidebar a').forEach((link) => {
-    link.addEventListener('click', function(e) {
-    
-        e.preventDefault();
-        
-       
-        const sections = document.querySelectorAll('.section');
-        sections.forEach(section => {
-            section.style.display = 'none';
-        });
-        
-
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.style.display = 'block';
+    toggleButton.addEventListener("click", function() {
+        sidebar.classList.toggle("hidden");
+        if (sidebar.classList.contains("hidden")) {
+            content.style.marginLeft = "20px"; // Adjust content width when sidebar is hidden
+        } else {
+            content.style.marginLeft = "270px"; // Reset content width when sidebar is shown
         }
     });
 });
-
-document.querySelector('#reports').style.display = 'block';
