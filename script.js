@@ -45,3 +45,14 @@ document.addEventListener("DOMContentLoaded", function () {
         sidebar.classList.toggle("minimized");
     });
 });
+document.addEventListener("DOMContentLoaded", function () {
+    let accountsMenu = document.querySelector(".accounts-menu");
+
+    accountsMenu.addEventListener("mouseenter", function () {
+        this.textContent = "Accounts ▲";
+    });
+
+    accountsMenu.addEventListener("mouseleave", function () {
+        this.textContent = "Accounts ▼";
+    });
+});
