@@ -6,10 +6,12 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-image: url(/wallpaper\ for\ web.jpg);
     display: flex;
     justify-content: center;
     height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .container {
@@ -57,9 +59,13 @@ body {
 }
 
 .content {
-    margin-left: 270px;
+    
     padding: 20px;
     width: calc(100% - 270px);
+    background-image: url(/wallpaper\ for\ web.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 
 .content h1 {
