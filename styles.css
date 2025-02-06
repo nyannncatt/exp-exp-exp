@@ -126,7 +126,7 @@ body {
     transition: width 0.3s ease-in-out;
     position: center;
     height: 100%;
-    background-color: #333;
+    background-color: #444;
     padding: 15px;
     left: 0;
     overflow: hidden;
@@ -173,7 +173,7 @@ body {
     transition: width 0.3s ease-in-out;
     position: fixed;
     height: 100%;
-    background-color: #333;
+    background-color: #272a55c7;
     padding: 15px;
     right: 0; 
     overflow: hidden;
