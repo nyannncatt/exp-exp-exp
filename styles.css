@@ -6,7 +6,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-image: url(wallpaper.jpg);
+    background-image: url('wallpaper.jpg');
     display: flex;
     justify-content: center;
     height: 100vh;
